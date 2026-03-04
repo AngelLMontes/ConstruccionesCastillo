@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construcciones Castillo</title>
     <style>
+        /* --- ESTILOS PARA PC Y LAPTOP (Tu diseño original) --- */
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .enlace-seccion {
             text-align: center;
             margin: 20px 0;
             display: block;
         }
+
         .telefono-estilo {
             font-size: 30px;
             font-weight: bold;
@@ -18,16 +28,19 @@
             padding: 5px 10px;
             border-radius: 5px;
         }
+
         .telefono-estilo:hover {
             color: #0096ff;
             text-shadow: 0px 0px 10px rgba(0, 150, 255, 0.5);
             transform: scale(1.1);
         }
+
         .nombre-estilo {
             font-size: 30px;
             color: #333;
             margin-left: 10px;
         }
+
         .galeria-flujo {
             display: flex !important;
             flex-direction: row !important;
@@ -36,6 +49,7 @@
             align-items: center;
             width: 100%;
         }
+
         .bloque-imagen {
             display: inline-flex;
             align-items: center;
@@ -44,15 +58,18 @@
             border-right: 2px solid #ccc;
             margin-bottom: 15px;
         }
+
         .bloque-imagen:last-child {
             border-right: none;
         }
+
         .bloque-imagen img {
             display: block;
             border: 1px solid #eee;
             transition: all 0.3s ease;
             cursor: pointer;
         }
+
         .bloque-imagen img:hover {
             box-shadow: 0px 0px 15px rgba(0, 150, 255, 0.7); 
             border: 1px solid #0096ff; 
@@ -60,6 +77,8 @@
             position: relative;
             z-index: 10;
         }
+
+        /* --- VISOR DE IMÁGENES (Lightbox) --- */
         #visor-fondo {
             display: none;
             position: fixed;
@@ -72,11 +91,33 @@
             justify-content: center;
             align-items: center;
         }
+
         #visor-imagen {
             max-width: 90%;
             max-height: 90%;
             border: 3px solid white;
             box-shadow: 0px 0px 25px rgba(255,255,255,0.2);
+        }
+
+        /* --- AJUSTES AUTOMÁTICOS PARA CELULAR (ANDROID/TABLET) --- */
+        @media (max-width: 768px) {
+            .telefono-estilo, .nombre-estilo {
+                font-size: 20px; /* Texto más cómodo para móvil */
+            }
+
+            .bloque-imagen {
+                flex-grow: 1; /* Estira las imágenes para cubrir huecos vacíos */
+                justify-content: center;
+                border-right: none; /* Quitamos la línea para evitar amontonamiento */
+                margin-right: 0;
+                padding-right: 0;
+            }
+
+            .bloque-imagen img {
+                width: 100% !important; /* La imagen se adapta al bloque */
+                height: auto !important;
+                max-width: 48vw; /* Permite 2 imágenes por fila sin dejar espacios */
+            }
         }
     </style>
 </head>
@@ -122,5 +163,5 @@
         }
     </script>
 </body>
-
 </html>
+

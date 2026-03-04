@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Construcciones Castillo</title>
+    <style>
+        .enlace-seccion {
+            text-align: center;
+            margin: 20px 0;
+            display: block;
+        }
+        .telefono-estilo {
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007bff;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .telefono-estilo:hover {
+            color: #0096ff;
+            text-shadow: 0px 0px 10px rgba(0, 150, 255, 0.5);
+            transform: scale(1.1);
+        }
+        .nombre-estilo {
+            font-size: 30px;
+            color: #333;
+            margin-left: 10px;
+        }
+        .galeria-flujo {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+        .bloque-imagen {
+            display: inline-flex;
+            align-items: center;
+            padding-right: 3px; 
+            margin-right: 3px;
+            border-right: 2px solid #ccc;
+            margin-bottom: 15px;
+        }
+        .bloque-imagen:last-child {
+            border-right: none;
+        }
+        .bloque-imagen img {
+            display: block;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .bloque-imagen img:hover {
+            box-shadow: 0px 0px 15px rgba(0, 150, 255, 0.7); 
+            border: 1px solid #0096ff; 
+            transform: scale(1.05); 
+            position: relative;
+            z-index: 10;
+        }
+        #visor-fondo {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        #visor-imagen {
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid white;
+            box-shadow: 0px 0px 25px rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titulo"><img src="cchtml/Portada.jpg" width="1200" height="800" /></h1>
+        <img src="cchtml/img1x.jpg" width="1200" height="800" />
+    </header>
+
+    <div class="enlace-seccion">
+        <a class="telefono-estilo" target="_blank" href="https://wa.me/qr/DQUQTYOFSA2LP1">"7772808203"</a> 
+        <span class="nombre-estilo">Arq. Luis Castillo.</span>
+    </div>
+
+    <hr>
+
+    <section class="galeria-flujo">
+        <div class="bloque-imagen"><img src="cchtml/precios.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/Contacto.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img2.jpg" width="270" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img3.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img4.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img8.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img5.jpg" width="250" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img6.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img7.jpg" width="250" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img9.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img10.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img11.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img12.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img13.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img14.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+    </section>
+
+    <div id="visor-fondo" onclick="this.style.display='none'">
+        <img id="visor-imagen" src="" />
+    </div>
+
+    <script>
+        function abrirVisor(ruta) {
+            document.getElementById('visor-fondo').style.display = 'flex';
+            document.getElementById('visor-imagen').src = ruta;
+        }
+    </script>
+</body>
+</html>

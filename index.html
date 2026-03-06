@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,7 +77,6 @@
             z-index: 10;
         }
 
-        /* --- VISOR DE IMÁGENES (Lightbox) --- */
         #visor-fondo {
             display: none;
             position: fixed;
@@ -121,37 +120,36 @@
 </head>
 <body>
     <header>
-        <h1 id="titulo"><img src="cchtml/Portada.jpg" width="1200" height="800" /></h1>
-        <img src="cchtml/img1x.jpg" width="1200" height="800" />
+        <h1 id="titulo"><img src="cchtml/Portada.jpg" width="1200" height="800" alt="Portada" /></h1>
+        <img src="cchtml/img1x.jpg" width="1200" height="800" alt="Imagen principal" />
     </header>
 
     <div class="enlace-seccion">
-        <a class="telefono-estilo" target="_blank" href="https://wa.me/qr/DQUQTYOFSA2LP1">"7772808203"</a> 
+        <a class="telefono-estilo" target="_blank" href="https://wa.me/qr/DQUQTYOFSA2LP1">7772808203</a> 
         <span class="nombre-estilo">Arq. Luis Castillo.</span>
     </div>
 
     <hr>
 
     <section class="galeria-flujo">
-        <div class="bloque-imagen"><img src="cchtml/precios.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/Contacto.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img2.jpg" width="270" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img3.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img4.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img8.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img5.jpg" width="250" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img6.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img7.jpg" width="250" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img9.jpg" width="230" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/Contacto.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img2.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img3.jpg" width="240" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img4.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img8.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img5.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img6.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img7.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img9.jpg" width="235" height="250" onclick="abrirVisor(this.src)" /></div>
         <div class="bloque-imagen"><img src="cchtml/img10.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img11.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img12.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img13.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
-        <div class="bloque-imagen"><img src="cchtml/img14.jpg" width="238" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img11.jpg" width="298" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img12.jpg" width="298" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img13.jpg" width="298" height="250" onclick="abrirVisor(this.src)" /></div>
+        <div class="bloque-imagen"><img src="cchtml/img14.jpg" width="298" height="250" onclick="abrirVisor(this.src)" /></div>
     </section>
 
     <div id="visor-fondo" onclick="this.style.display='none'">
-        <img id="visor-imagen" src="" />
+        <img id="visor-imagen" src="" alt="Visor de imagen" />
     </div>
 
     <script>
@@ -162,5 +160,6 @@
     </script>
 </body>
 </html>
+
 
 
